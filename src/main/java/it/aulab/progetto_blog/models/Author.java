@@ -3,6 +3,8 @@ package it.aulab.progetto_blog.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,6 +31,7 @@ public class Author {
     private String email;
 
     @OneToMany(mappedBy = "author") //mappedBy serve a indicare su quale attributo della classe Post sta avvenendo il collegamento
+    @JsonIgnoreProperties({"author"})
     private List<Post> posts = new ArrayList<Post>();
 
     public Author() {

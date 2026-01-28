@@ -3,11 +3,11 @@ package it.aulab.progetto_blog.repositories;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.ListCrudRepository;
 
 import it.aulab.progetto_blog.models.Post;
 
-public interface PostRepository extends CrudRepository<Post, Long> {
+public interface PostRepository extends ListCrudRepository<Post, Long> {
 
     List<Post> findByTitle(String title);
     List<Post> findByBody(String body);

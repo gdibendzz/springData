@@ -30,7 +30,7 @@ class ProgettoBlogApplicationTests {
 	@Autowired
 	CommentRepository commentRepository;
 
-	@BeforeEach //annotazione fornita dal framework JUnit5: significa che il metodo che ha quest'annotazione viene eseguito prima di ciascun un test(@Test)
+	@BeforeEach //annotazione fornita dal framework JUnit5: significa che il metodo che ha quest'annotazione viene eseguito prima di ciascun test(@Test)
 	void load() {
 		Author a1 = new Author();
 		a1.setFirstname("Giuseppe");
