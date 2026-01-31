@@ -76,4 +76,8 @@ public class Author {
     public void setPosts(List<Post> posts) {
         this.posts = posts;
     }
+
+    public String getFullname() {
+        return firstname + " " + lastname;
+    }
 }
